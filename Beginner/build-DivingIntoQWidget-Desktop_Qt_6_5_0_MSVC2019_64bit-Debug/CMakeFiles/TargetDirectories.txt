@@ -1,0 +1,8 @@
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-DivingIntoQWidget-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/DivingIntoQWidget.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-DivingIntoQWidget-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-DivingIntoQWidget-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-DivingIntoQWidget-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-DivingIntoQWidget-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/install.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-DivingIntoQWidget-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/install/local.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-DivingIntoQWidget-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/DivingIntoQWidget_autogen_timestamp_deps.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-DivingIntoQWidget-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/DivingIntoQWidget_autogen.dir

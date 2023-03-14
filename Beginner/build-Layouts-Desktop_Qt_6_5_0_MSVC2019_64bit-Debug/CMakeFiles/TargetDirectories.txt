@@ -1,0 +1,8 @@
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-Layouts-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/Layouts.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-Layouts-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-Layouts-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-Layouts-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-Layouts-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/install.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-Layouts-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/install/local.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-Layouts-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/Layouts_autogen_timestamp_deps.dir
+C:/Users/mcaglar/Documents/Projects/QtExercises/Gui/qtWidgetLearning/Beginner/build-Layouts-Desktop_Qt_6_5_0_MSVC2019_64bit-Debug/CMakeFiles/Layouts_autogen.dir
