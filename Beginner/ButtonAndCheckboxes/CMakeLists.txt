@@ -13,10 +13,10 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
-        main.cpp
-        dialog.cpp
-        dialog.h
         dialog.ui
+        main.cpp
+        dialog.h dialog.cpp
+        Page1.cpp Page2.cpp Page3.cpp Page4.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

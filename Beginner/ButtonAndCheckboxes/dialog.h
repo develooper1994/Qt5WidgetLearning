@@ -1,7 +1,11 @@
 #ifndef DIALOG_H
 #define DIALOG_H
 
+#include "./ui_dialog.h"
 #include <QDialog>
+#include <QCheckBox>
+#include <QMessageBox>
+#include <QCommandLinkButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Dialog; }
@@ -30,7 +34,28 @@ private slots:
 
     void on_btnQuit_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void on_btnPizzaCancel_clicked();
+
+    void on_btnPizzaOk_clicked();
+
+    void on_option1_clicked();
+
+    void on_buttonBox_accepted();
+
+    void on_buttonBox_rejected();
+
+    void on_buttonBox_helpRequested();
+
+    void on_option2_clicked();
+
+    void on_option3_clicked();
+
 private:
     Ui::Dialog *ui;
+
+    QString getPizzaOptions(QObject* obj);
+    void selectPage4Option(QObject* sender);
 };
 #endif // DIALOG_H
