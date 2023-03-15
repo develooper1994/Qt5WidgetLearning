@@ -1,7 +1,7 @@
 #include "dialog.h"
 #include "./ui_dialog.h"
 
-# include <QVBoxLayout>
+# include <QGridLayout>
 # include <QPushButton>
 
 Dialog::Dialog(QWidget *parent)
@@ -9,10 +9,13 @@ Dialog::Dialog(QWidget *parent)
     , ui(new Ui::Dialog)
 {
     ui->setupUi(this);
-    QVBoxLayout* layout = new QVBoxLayout();
+    QGridLayout* layout = new QGridLayout();
+    int row = 0, col = 0;
     for (int idx = 0; idx < 50; ++idx) {
         QPushButton* button = new QPushButton("Button " + QString::number(idx));
-        layout->addWidget(button);
+        int row = idx % 5;
+        col += (idx/5);
+        layout->addWidget(button, row, col, 1, 1);
     }
     ui->scrollAreaWidgetContents->setLayout(layout);
 }
