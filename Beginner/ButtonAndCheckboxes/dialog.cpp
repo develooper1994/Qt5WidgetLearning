@@ -46,12 +46,16 @@ void Dialog::on_btnIsChecked_clicked()
 void Dialog::on_btnToggleAutoRepeat_clicked()
 {
     qDebug() << "Toggle Auto Repeat Button Clicked";
+    bool repeat = !ui->btnAutoRepeat->autoRepeat();
+    ui->btnAutoRepeat->setAutoRepeat(repeat);
 }
 
 
 void Dialog::on_btnToggleDefault_clicked()
 {
     qDebug() << "Toggle Default Button Clicked";
+    bool makeDefault = !ui->btnDefault->isDefault();
+    ui->btnDefault->setDefault(makeDefault);
 }
 
 
