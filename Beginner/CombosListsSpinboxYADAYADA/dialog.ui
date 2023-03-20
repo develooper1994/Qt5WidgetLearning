@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="Combobox">
       <attribute name="title">
@@ -123,10 +123,56 @@
        </layout>
       </widget>
      </widget>
-     <widget class="QWidget" name="tab2">
+     <widget class="QWidget" name="ListWidget">
       <attribute name="title">
        <string>Tab 2</string>
       </attribute>
+      <widget class="QGroupBox" name="grpListWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>280</width>
+         <height>299</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>List Widget Basics</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QComboBox" name="cmbListWidget">
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnListWidgetAdd">
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listWidget1"/>
+        </item>
+        <item>
+         <widget class="QDialogButtonBox" name="btnBoxListWidget">
+          <property name="standardButtons">
+           <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </widget>
    </item>
