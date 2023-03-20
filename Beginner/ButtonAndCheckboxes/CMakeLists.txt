@@ -16,7 +16,7 @@ set(PROJECT_SOURCES
         dialog.ui
         main.cpp
         dialog.h dialog.cpp
-        Page1.cpp Page2.cpp Page3.cpp Page4.cpp
+        Page1.cpp Page2.cpp Page3.cpp Page4.cpp Page6.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

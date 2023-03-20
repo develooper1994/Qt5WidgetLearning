@@ -18,6 +18,7 @@ class Dialog : public QDialog
 public:
     Dialog(QWidget *parent = nullptr);
     ~Dialog();
+    void Page6Connection();
 
 private slots:
     void on_btnCheckable_clicked();
@@ -52,10 +53,20 @@ private slots:
 
     void on_option3_clicked();
 
+    // Page 6
+    void appendCode();
+
+    void on_btnSave_clicked();
+
+    void on_btnVerify_clicked();
+
 private:
     Ui::Dialog *ui;
 
     QString getPizzaOptions(QObject* obj);
     void selectPage4Option(QObject* sender);
+
+    // Page 6
+    QString code, accumulated;
 };
 #endif // DIALOG_H
