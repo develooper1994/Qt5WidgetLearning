@@ -1,7 +1,6 @@
 #include "dialog.h"
-#include <QSettings>
 
-void Dialog::init()
+void Dialog::init_TAB1()
 {
     ui->comboBox->clear();
 
@@ -11,10 +10,12 @@ void Dialog::init()
 }
 
 
-void Dialog::load()
+void Dialog::load_TAB1()
 {
     QSettings settings("CombosListsSpinboxYADAYADA", "CombosListsSpinboxYADAYADATab1");
+    settings.beginGroup("TAB1");
     QVariant value = settings.value("settings", 0);
+    settings.endGroup();
 
     bool ok;
     int index = value.toInt(&ok);
@@ -41,7 +42,9 @@ void Dialog::on_comboBox_currentIndexChanged(int index){
 
 void Dialog::on_btnCmbBasics_clicked(){
     QSettings settings("CombosListsSpinboxYADAYADA", "CombosListsSpinboxYADAYADATab1");
+    settings.beginGroup("TAB1");
     settings.setValue("settings", ui->comboBox->currentIndex());
+    settings.endGroup();
 
     QMessageBox::information(this, "Saved", "Selection saved, now get back to work!");
 }

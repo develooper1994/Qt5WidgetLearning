@@ -159,7 +159,11 @@
          </layout>
         </item>
         <item>
-         <widget class="QListWidget" name="listWidget1"/>
+         <widget class="QListWidget" name="listWidget1">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QDialogButtonBox" name="btnBoxListWidget">
