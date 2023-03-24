@@ -20,6 +20,8 @@ Dialog::Dialog(QWidget *parent)
     init_TAB4();
     load_TAB4();
     // Tab 5
+    init_TAB5();
+    load_TAB5();
 }
 
 Dialog::~Dialog(){

@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>3</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="Combobox">
       <attribute name="title">
@@ -304,6 +304,23 @@
         <widget class="QDialogButtonBox" name="btnLineEdit">
          <property name="standardButtons">
           <set>QDialogButtonBox::Ok</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="PlainTextEdit">
+      <attribute name="title">
+       <string>Tab 5</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QPlainTextEdit" name="plainTextEdit"/>
+       </item>
+       <item>
+        <widget class="QDialogButtonBox" name="buttonBox_2">
+         <property name="standardButtons">
+          <set>QDialogButtonBox::Open|QDialogButtonBox::Save</set>
          </property>
         </widget>
        </item>
