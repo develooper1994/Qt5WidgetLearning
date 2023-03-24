@@ -84,5 +84,7 @@ void Dialog::on_buttonBox_2_clicked(QAbstractButton *button){
 }
 
 void Dialog::closeEvent(QCloseEvent *event){
+    // save and close
+    save_TAB5();
     event->accept();
 }
