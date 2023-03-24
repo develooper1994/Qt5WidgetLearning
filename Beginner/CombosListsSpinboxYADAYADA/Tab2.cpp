@@ -8,7 +8,7 @@ void Dialog::init_TAB2(){
 }
 
 void Dialog::load_TAB2(){
-    QSettings settings;
+    QSettings settings("CombosListsSpinboxYADAYADA", "Tab2");
     settings.beginGroup("TAB2");
     // combobox-current
     ui->cmbListWidget->setCurrentText(settings.value("text", "").toString());
@@ -31,7 +31,7 @@ void Dialog::load_TAB2(){
 }
 
 void Dialog::save_TAB2(){
-    QSettings settings;
+    QSettings settings("CombosListsSpinboxYADAYADA", "Tab2");
     settings.clear();  // clear ghost data
     settings.beginGroup("TAB2");
     // combobox-current
@@ -40,14 +40,14 @@ void Dialog::save_TAB2(){
     settings.beginWriteArray("combo");
     for (int idx = 0; idx < ui->cmbListWidget->count(); ++idx) {
         settings.setArrayIndex(idx);
-        settings.value("item", ui->cmbListWidget->itemText(idx));
+        settings.setValue("item", ui->cmbListWidget->itemText(idx));
     }
     settings.endArray();
     // listwidget-items
     settings.beginWriteArray("list");
     for (int idx = 0; idx < ui->listWidget1->count(); ++idx) {
         settings.setArrayIndex(idx);
-        settings.value("item", ui->listWidget1->item(idx)->text());
+        settings.setValue("item", ui->listWidget1->item(idx)->text());
     }
     settings.endArray();
 
@@ -70,7 +70,7 @@ void Dialog::on_btnBoxListWidget_clicked(QAbstractButton *button){
     // detect which button clicked
     qDebug() << button->text();
 
-    if (button->text().contains("Ok")) {
+    if (button->text().contains("OK")) {
         save_TAB2();
         accept();
         return;

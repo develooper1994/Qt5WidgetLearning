@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <QSettings>
 #include <QDebug>
+#include <QMetaEnum>
 
 #include "ui_dialog.h"
 
@@ -30,6 +31,26 @@ private slots:
 
     void on_btnBoxListWidget_clicked(QAbstractButton *button);
 
+    void on_fontComboBox_currentFontChanged(const QFont &f);
+
+    void on_buttonBox_accepted();
+
+    void on_buttonBox_rejected();
+
+    void on_cbLineEditEnabled_toggled(bool checked);
+
+    void on_cbLineEditReadOnly_toggled(bool checked);
+
+    void on_cbLineEditClearButton_toggled(bool checked);
+
+    void on_cmbEchoLineEdit_currentIndexChanged(int index);
+
+    void on_lineEditDefault_textChanged(const QString &arg1);
+
+    void on_lineEditTest_textChanged(const QString &arg1);
+
+    void on_btnLineEdit_accepted();
+
 private:
     Ui::Dialog *ui;
     // Tab 1
@@ -40,7 +61,14 @@ private:
     void load_TAB2();
     void save_TAB2();
     // Tab 3
+    void init_TAB3();
+    void load_TAB3();
+    void save_TAB3();
     // Tab 4
+    void init_TAB4();
+    void load_TAB4();
+    void save_TAB4();
+    QMetaEnum echoModes;     // get all "QLineEdit::EchoMode" modes and add to combobox
     // Tab 5
 };
 #endif // DIALOG_H

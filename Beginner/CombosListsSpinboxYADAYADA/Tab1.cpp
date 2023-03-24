@@ -12,7 +12,7 @@ void Dialog::init_TAB1()
 
 void Dialog::load_TAB1()
 {
-    QSettings settings("CombosListsSpinboxYADAYADA", "CombosListsSpinboxYADAYADATab1");
+    QSettings settings("CombosListsSpinboxYADAYADA", "Tab1");
     settings.beginGroup("TAB1");
     QVariant value = settings.value("settings", 0);
     settings.endGroup();
@@ -41,7 +41,7 @@ void Dialog::on_comboBox_currentIndexChanged(int index){
 
 
 void Dialog::on_btnCmbBasics_clicked(){
-    QSettings settings("CombosListsSpinboxYADAYADA", "CombosListsSpinboxYADAYADATab1");
+    QSettings settings("CombosListsSpinboxYADAYADA", "Tab1");
     settings.beginGroup("TAB1");
     settings.setValue("settings", ui->comboBox->currentIndex());
     settings.endGroup();
