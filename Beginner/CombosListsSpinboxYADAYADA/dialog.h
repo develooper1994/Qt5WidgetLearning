@@ -55,6 +55,10 @@ private slots:
 
     void on_buttonBox_2_clicked(QAbstractButton *button);
 
+    void on_SpinBoxButtonBox_accepted();
+
+    void on_SpinBoxButtonBox_rejected();
+
 private:
     Ui::Dialog *ui;
     // Tab 1
@@ -79,6 +83,9 @@ private:
     void save_TAB5();
     bool m_saved;
     // Tab 6
+    void init_TAB6();
+    void load_TAB6();
+    void save_TAB6();
     // Tab 7
     // Tab 8
 
