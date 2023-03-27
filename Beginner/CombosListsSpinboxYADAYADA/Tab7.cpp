@@ -14,7 +14,7 @@ void Dialog::save_TAB7(){
 
 
 
-
+// slots
 void Dialog::on_de_userDateChanged(const QDate &date){
     ui->dte->setDate(date);
 }
@@ -26,7 +26,7 @@ void Dialog::on_te_userTimeChanged(const QTime &time){
 
 
 void Dialog::on_btnBoxDateAndTime_accepted(){
-    QMessageBox::information(this, "Selected", "You Selected: " + ui->dte->dateTime().toString(Qt::DateFormat::TextDate));
+    QMessageBox::information(this, "Selected", "You Selected: " + ui->dte->dateTime().toLocalTime().toString());
     accept();
 }
 

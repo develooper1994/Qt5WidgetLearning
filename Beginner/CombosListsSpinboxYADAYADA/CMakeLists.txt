@@ -16,7 +16,9 @@ set(PROJECT_SOURCES
         main.cpp
         dialog.cpp dialog.h
         dialog.ui
-        Tab1.cpp Tab2.cpp Tab3.cpp Tab4.cpp Tab5.cpp Tab6.cpp Tab7.cpp
+        Tab1.cpp Tab2.cpp Tab3.cpp
+        Tab4.cpp Tab5.cpp Tab6.cpp
+        Tab7.cpp Tab8.cpp Tab9Assignment.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

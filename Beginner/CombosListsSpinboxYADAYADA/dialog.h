@@ -69,6 +69,14 @@ private slots:
 
     void on_btnBoxDateAndTime_rejected();
 
+    void on_btnBoxUserInputValidateRegex_accepted();
+
+    void on_btnBoxUserInputValidateRegex_rejected();
+
+    void on_txtEmail_textChanged(const QString &arg1);
+
+    void on_btnBoxAssignment_accepted();
+
 private:
     Ui::Dialog *ui;
     // Tab 1
@@ -101,6 +109,12 @@ private:
     void load_TAB7();
     void save_TAB7();
     // Tab 8
+    void init_TAB8();
+    void load_TAB8();
+    void save_TAB8();
+    void checkInput();
+    // Tab 9 - Assignment
+    void init_TAB9();
 
     // QWidget interface
 protected:

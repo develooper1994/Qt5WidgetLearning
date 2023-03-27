@@ -1,5 +1,4 @@
 #include "dialog.h"
-#include "qmetaobject.h"
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
@@ -26,11 +25,15 @@ Dialog::Dialog(QWidget *parent)
     init_TAB6();
     load_TAB6();
     // Tab 7
-    init_TAB6();
-    load_TAB6();
+    init_TAB7();
+    load_TAB7();
+    // Tab 8
+    init_TAB8();
+    load_TAB8();
+    // Tab 9 - Assignment
+    init_TAB9();
 }
 
 Dialog::~Dialog(){
     delete ui;
 }
-
