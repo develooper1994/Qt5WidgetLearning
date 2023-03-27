@@ -6,6 +6,8 @@
 #include <QSettings>
 #include <QDebug>
 #include <QMetaEnum>
+#include <QFile>
+#include <QDataStream>
 
 #include "ui_dialog.h"
 
@@ -44,8 +46,6 @@ private slots:
     void on_cbLineEditClearButton_toggled(bool checked);
 
     void on_cmbEchoLineEdit_currentIndexChanged(int index);
-
-    void on_lineEditDefault_textChanged(const QString &arg1);
 
     void on_lineEditTest_textChanged(const QString &arg1);
 

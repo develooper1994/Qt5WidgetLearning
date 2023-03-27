@@ -9,20 +9,17 @@ void Dialog::init_TAB4(){
     // get all "QLineEdit::EchoMode" modes and add to combobox
     echoModes = QMetaEnum::fromType<QLineEdit::EchoMode>();
     for (int idx = 0; idx < echoModes.keyCount(); ++idx) {
-        ui->cmbEchoLineEdit->addItem(echoModes.valueToKey(idx), echoModes.value(idx));
+        // ui->cmbEchoLineEdit->addItem(echoModes.valueToKey(idx), echoModes.value(idx));
+        ui->cmbEchoLineEdit->addItem(echoModes.valueToKey(idx));
     }
-
 }
 
 void Dialog::load_TAB4(){
     QSettings settings("CombosListsSpinboxYADAYADA", "Tab4");
-
-
 }
 
 void Dialog::save_TAB4(){
     QSettings settings("CombosListsSpinboxYADAYADA", "Tab4");
-
 }
 
 
@@ -35,27 +32,24 @@ void Dialog::on_cmbEchoLineEdit_currentIndexChanged(int index){
 }
 
 
+void Dialog::on_lineEditTest_textChanged(const QString &arg1){
+    ui->lineEditDefault->setText(arg1);
+}
+
+void Dialog::on_btnLineEdit_accepted(){
+    QMessageBox::information(this,"Entered:","You entered " + ui->lineEditTest->text());
+    accept();
+}
+
+
 void Dialog::on_cbLineEditEnabled_toggled(bool checked){
     ui->lineEditTest->setEnabled(checked);
 }
-
 
 void Dialog::on_cbLineEditReadOnly_toggled(bool checked){
     ui->lineEditTest->setReadOnly(checked);
 }
 
-
 void Dialog::on_cbLineEditClearButton_toggled(bool checked){
     ui->lineEditTest->setClearButtonEnabled(checked);
-}
-
-void Dialog::on_lineEditTest_textChanged(const QString &arg1){
-    ui->lineEditDefault->setText(arg1);
-}
-
-void Dialog::on_lineEditDefault_textChanged(const QString &arg1){}
-
-void Dialog::on_btnLineEdit_accepted(){
-    QMessageBox::information(this,"Entered:","You entered " + ui->lineEditTest->text());
-    accept();
 }

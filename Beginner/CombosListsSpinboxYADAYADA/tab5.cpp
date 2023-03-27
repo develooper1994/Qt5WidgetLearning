@@ -8,9 +8,9 @@
 void Dialog::init_TAB5(){
     //allow resize
     Qt::WindowFlags flags = Qt::WindowType::Widget; // 0
-    flags |= Qt::WindowMinMaxButtonsHint;
-    flags |= Qt::WindowContextHelpButtonHint;
-    flags |= Qt::WindowCloseButtonHint;
+    flags |= Qt::WindowType::WindowMinMaxButtonsHint;
+    flags |= Qt::WindowType::WindowContextHelpButtonHint;
+    flags |= Qt::WindowType::WindowCloseButtonHint;
     setWindowFlags(flags);
 
     QPushButton *btnCopy = new QPushButton("Copy",this);
@@ -36,6 +36,7 @@ void Dialog::init_TAB5(){
 void Dialog::load_TAB5(){
     QString filename("QPlainTextEdit.txt");
     QFile file(filename);
+    if(!file.exists()) return;
     if(!file.open(QIODevice::OpenModeFlag::ReadOnly | QIODevice::OpenModeFlag::Text)){
         QMessageBox::critical(this, "Error", file.errorString());
         qCritical() << "Error: " << file.errorString();
@@ -65,12 +66,9 @@ void Dialog::save_TAB5(){
 
 
 // slots
-
-void Dialog::on_plainTextEdit_textChanged()
-{
+void Dialog::on_plainTextEdit_textChanged(){
     m_saved = false;
 }
-
 
 void Dialog::on_buttonBox_2_clicked(QAbstractButton *button){
     if (button->text().contains("Save")) {
@@ -85,6 +83,9 @@ void Dialog::on_buttonBox_2_clicked(QAbstractButton *button){
 
 void Dialog::closeEvent(QCloseEvent *event){
     // save and close
-    save_TAB5();
+    //save_TAB5();
+    if (false==m_saved) {
+        qDebug() << "unsaved changes!";
+    }
     event->accept();
 }

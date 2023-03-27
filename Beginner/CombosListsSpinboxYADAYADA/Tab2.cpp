@@ -13,19 +13,19 @@ void Dialog::load_TAB2(){
     // combobox-current
     ui->cmbListWidget->setCurrentText(settings.value("text", "").toString());
     // combobox-items
-    int cmbSize = settings.beginReadArray("combo");
-    for (int idx = 0; idx < cmbSize; ++idx) {
-        settings.setArrayIndex(idx);
-        ui->cmbListWidget->addItem(settings.value("item", "").toString());
-    }
-    settings.endArray();
+        int cmbSize = settings.beginReadArray("combo");
+        for (int idx = 0; idx < cmbSize; ++idx) {
+            settings.setArrayIndex(idx);
+            ui->cmbListWidget->addItem(settings.value("item", "").toString());
+        }
+        settings.endArray();
     // listwidget-items
-    int listSize = settings.beginReadArray("list");
-    for (int idx = 0; idx < listSize; ++idx) {
-        settings.setArrayIndex(idx);
-        ui->listWidget1->addItem(settings.value("item", "").toString());
-    }
-    settings.endArray();
+        int listSize = settings.beginReadArray("list");
+        for (int idx = 0; idx < listSize; ++idx) {
+            settings.setArrayIndex(idx);
+            ui->listWidget1->addItem(settings.value("item", "").toString());
+        }
+        settings.endArray();
 
     settings.endGroup();
 }
@@ -37,19 +37,19 @@ void Dialog::save_TAB2(){
     // combobox-current
     settings.setValue("text", ui->cmbListWidget->currentText());
     // combobox-items
-    settings.beginWriteArray("combo");
-    for (int idx = 0; idx < ui->cmbListWidget->count(); ++idx) {
-        settings.setArrayIndex(idx);
-        settings.setValue("item", ui->cmbListWidget->itemText(idx));
-    }
-    settings.endArray();
+        settings.beginWriteArray("combo");
+        for (int idx = 0; idx < ui->cmbListWidget->count(); ++idx) {
+            settings.setArrayIndex(idx);
+            settings.setValue("item", ui->cmbListWidget->itemText(idx));
+        }
+        settings.endArray();
     // listwidget-items
-    settings.beginWriteArray("list");
-    for (int idx = 0; idx < ui->listWidget1->count(); ++idx) {
-        settings.setArrayIndex(idx);
-        settings.setValue("item", ui->listWidget1->item(idx)->text());
-    }
-    settings.endArray();
+        settings.beginWriteArray("list");
+        for (int idx = 0; idx < ui->listWidget1->count(); ++idx) {
+            settings.setArrayIndex(idx);
+            settings.setValue("item", ui->listWidget1->item(idx)->text());
+        }
+        settings.endArray();
 
 
     settings.endGroup();
@@ -75,21 +75,22 @@ void Dialog::on_btnBoxListWidget_clicked(QAbstractButton *button){
         accept();
         return;
     }
-    if (button->text().contains("Cancel")) {
+    else if (button->text().contains("Cancel")) {
         reject();
         return;
     }
-    if (button->text().contains("Clear")) {
+    else if (button->text().contains("Clear")) {
         ui->cmbListWidget->clear();
         ui->listWidget1->clear();
         return;
     }
-    if (button->text().contains("Remove")) {
+    else if (button->text().contains("Remove")) {
         QList<QListWidgetItem*> items = ui->listWidget1->selectedItems();
         foreach (QListWidgetItem* item, items) {
             ui->listWidget1->removeItemWidget(item);
             delete item;
         }
+        return;
     }
 
 }
