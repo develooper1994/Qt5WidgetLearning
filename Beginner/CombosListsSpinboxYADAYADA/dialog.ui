@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>5</number>
+      <number>6</number>
      </property>
      <widget class="QWidget" name="Combobox">
       <attribute name="title">
@@ -328,7 +328,7 @@
      </widget>
      <widget class="QWidget" name="SpinBox">
       <attribute name="title">
-       <string>Tab6</string>
+       <string>Tab 6</string>
       </attribute>
       <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
@@ -391,6 +391,54 @@
         </item>
        </layout>
       </widget>
+     </widget>
+     <widget class="QWidget" name="DateAndTime">
+      <attribute name="title">
+       <string>Tab 7</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <layout class="QGridLayout" name="gLayDateAndTime">
+         <item row="0" column="0">
+          <widget class="QLabel" name="lblDate">
+           <property name="text">
+            <string>Date</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QDateEdit" name="de"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="lblTime">
+           <property name="text">
+            <string>Time</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QTimeEdit" name="te"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="lblDateTime">
+           <property name="text">
+            <string>Date/Time</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QDateTimeEdit" name="dte"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QDialogButtonBox" name="btnBoxDateAndTime">
+         <property name="standardButtons">
+          <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>

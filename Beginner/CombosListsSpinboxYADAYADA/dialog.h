@@ -59,6 +59,16 @@ private slots:
 
     void on_SpinBoxButtonBox_rejected();
 
+    // Tab 7
+
+    void on_de_userDateChanged(const QDate &date);
+
+    void on_te_userTimeChanged(const QTime &time);
+
+    void on_btnBoxDateAndTime_accepted();
+
+    void on_btnBoxDateAndTime_rejected();
+
 private:
     Ui::Dialog *ui;
     // Tab 1
@@ -87,6 +97,9 @@ private:
     void load_TAB6();
     void save_TAB6();
     // Tab 7
+    void init_TAB7();
+    void load_TAB7();
+    void save_TAB7();
     // Tab 8
 
     // QWidget interface
