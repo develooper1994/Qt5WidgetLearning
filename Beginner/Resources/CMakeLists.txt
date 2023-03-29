@@ -12,11 +12,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-set(PROJECT_UI              dialog.ui)
-qt_add_resources(PROJECT_RESOURCES       resources.qrc)
+set(CMAKE_AUTOUIC_SEARCH_PATHS "${PROJECT_SOURCE_DIR}/ui")
+set(PROJECT_UI              ui/dialog.ui)
+qt_add_resources(PROJECT_RESOURCES       resources/resources.qrc)
 set(PROJECT_HEADERS_FILES   dialog.h)
-set(PROJECT_SOURCE_FILES    main.cpp
-                            dialog.cpp)
+set(PROJECT_SOURCE_FILES    dialog.cpp
+                            main.cpp
+                            Tab1.cpp
+                            )
 
 set(PROJECT_SOURCES
     ${PROJECT_UI}
