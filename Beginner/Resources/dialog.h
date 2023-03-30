@@ -7,9 +7,12 @@
 #include <QIcon>
 
 #include <QFile>
+#include <QFileInfoList>
 #include <QTextStream>
+#include <QDir>
 
 #include "./ui_dialog.h"
+#include "libraries/MyLib/mylib.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -33,6 +36,15 @@ private slots:
     void on_btnAccept();
 
     // Tab 2
+    void on_btnLoad_clicked();
+    void on_btnSave_2_clicked();
+
+    // Tab 3
+    void on_listWidget_itemSelectionChanged();
+    void on_btnBoxOk_accepted();
+    // Tab 4
+
+    void on_buttonBox_accepted();
 
 private:
     Ui::Dialog *ui;
@@ -43,6 +55,11 @@ private:
     void load();
     void save();
     // Tab 2
+    // Tab 3
+    void load_tab3();
+    void scan_tab3(QFileInfoList FIL);
+    // Tab 4
+    void init_tab4();
 
     // QWidget interface
 protected:

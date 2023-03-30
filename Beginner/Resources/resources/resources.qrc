@@ -8,4 +8,7 @@
         <file>images/file.png</file>
         <file>images/folder.png</file>
     </qresource>
+    <qresource prefix="/documents/files">
+        <file>files/file.txt</file>
+    </qresource>
 </RCC>

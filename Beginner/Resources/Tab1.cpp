@@ -10,9 +10,9 @@
 
 
 void Dialog::init(){
-    QPushButton* btnAccept = new QPushButton(QIcon(":/dialog/images/accept.png"), "Accept", this);
+    QPushButton* btnAccept = new QPushButton(QIcon(":/dialog/accept.png"), "Accept", this);
     QPushButton* btnReject = new QPushButton("Reject", this);
-    btnReject->setIcon(QIcon(":/dialog/images/cancel.png"));
+    btnReject->setIcon(QIcon(":/dialog/cancel.png"));
 
     ui->btnBox->addButton(btnAccept, QDialogButtonBox::ButtonRole::AcceptRole);
     ui->btnBox->addButton(btnReject, QDialogButtonBox::ButtonRole::RejectRole);

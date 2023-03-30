@@ -9,11 +9,13 @@ Dialog::Dialog(QWidget *parent)
     init();
     load();
     //Tab2
-
+    //Tab3
+    load_tab3();
+    //Tab4
+    init_tab4();
 }
 
 Dialog::~Dialog()
 {
     delete ui;
 }
-
