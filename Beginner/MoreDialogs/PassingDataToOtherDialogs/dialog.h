@@ -1,7 +1,8 @@
+
 #ifndef DIALOG_H
 #define DIALOG_H
 
-#include "dialog2.h"
+#include "selections.h"
 #include <QDialog>
 
 
@@ -20,9 +21,11 @@ public:
     ~Dialog();
 
 private slots:
-    void on_btnWith_clicked();
+    void on_pushButton_clicked();
 
-    void on_btnWithout_clicked();
+    void on_buttonBox_accepted();
+
+    void on_buttonBox_rejected();
 
 private:
     Ui::Dialog *ui;

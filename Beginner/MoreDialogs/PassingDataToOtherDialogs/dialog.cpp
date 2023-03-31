@@ -1,7 +1,6 @@
-
 #include "dialog.h"
 #include "./ui_dialog.h"
-
+#include <QMessageBox>
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
@@ -16,16 +15,26 @@ Dialog::~Dialog()
 }
 
 
-// slots
-void Dialog::on_btnWith_clicked(){
-    Dialog2* dialog2 = new Dialog2(this);
-    //Dialog2 dialog2;  // creates and destroys when out of scope! Not even works with exec!
-    dialog2->exec(); // !focus on this window!
+
+void Dialog::on_pushButton_clicked(){
+    Selections* selections = new Selections(this);
+    //set default
+    selections->setSelected(ui->lineEdit->text());
+    //show on screen and focus on
+    selections->exec();
+    //Read back to new selections
+    ui->lineEdit->setText(selections->selected());
 }
 
 
-void Dialog::on_btnWithout_clicked(){
-    Dialog2* dialog2 = new Dialog2(this);
-    dialog2->exec(); // ???focus on this window??? not every Operation Systems are the same!
+void Dialog::on_buttonBox_accepted()
+{
+    QMessageBox::information(this, "Selected", "Selected Item: " + ui->lineEdit->text());
+    accept();
+}
+
+
+void Dialog::on_buttonBox_rejected(){
+    reject();
 }
 

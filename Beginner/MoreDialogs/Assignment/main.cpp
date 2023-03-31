@@ -1,4 +1,5 @@
-#include "library/dialogs/dialog.h"
+
+#include "dialog.h"
 
 #include <QApplication>
 

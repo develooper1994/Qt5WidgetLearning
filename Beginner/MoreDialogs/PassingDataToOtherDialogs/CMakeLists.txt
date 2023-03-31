@@ -12,14 +12,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-set(DIALOG  dialog.cpp  dialog.h  dialog.ui)
-set(DIALOG2 dialog2.cpp dialog2.h dialog2.ui)
+
+set(Resources resources.qrc)
+set(Dialog dialog.cpp dialog.h dialog.ui)
+set(selections selections.h selections.cpp selections.ui)
+set(Dialogs ${Dialog} ${selections})
 
 set(PROJECT_SOURCES
         main.cpp
-        ${DIALOG}
-        ${DIALOG2}
+        ${Dialogs}
+        ${Resources}
 )
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(PassingDataToOtherDialogs

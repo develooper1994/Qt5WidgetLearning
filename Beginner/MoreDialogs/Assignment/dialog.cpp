@@ -16,3 +16,9 @@ Dialog::~Dialog()
 }
 
 
+
+void Dialog::on_btnLogin_clicked()
+{
+
+}
+

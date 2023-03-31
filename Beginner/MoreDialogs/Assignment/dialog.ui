@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>463</width>
-    <height>314</height>
+    <width>437</width>
+    <height>291</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,16 +15,16 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QPushButton" name="btnWith">
+    <widget class="QLabel" name="labelLogin">
      <property name="text">
-      <string>Exec with Parent</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Not Logged In&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="btnWithout">
+    <widget class="QPushButton" name="btnLogin">
      <property name="text">
-      <string>Exec without parent</string>
+      <string>Login</string>
      </property>
     </widget>
    </item>
