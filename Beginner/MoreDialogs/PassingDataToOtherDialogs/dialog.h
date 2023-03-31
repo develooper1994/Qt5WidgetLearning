@@ -1,7 +1,7 @@
-
 #ifndef DIALOG_H
 #define DIALOG_H
 
+#include "dialog2.h"
 #include <QDialog>
 
 
@@ -18,6 +18,11 @@ class Dialog : public QDialog
 public:
     Dialog(QWidget *parent = nullptr);
     ~Dialog();
+
+private slots:
+    void on_btnWith_clicked();
+
+    void on_btnWithout_clicked();
 
 private:
     Ui::Dialog *ui;

@@ -18,9 +18,9 @@ Dialog::~Dialog()
 // slots
 void Dialog::on_btnWithParent_clicked(){
     // dependent to parent window by passing this
-    Dialog2* dialog2 = new Dialog2(this); // creates and not destroys when out of scope!
-    //Dialog2 dialog2;  // creates and destroys when out of scope!
-    dialog2->show();
+    //Dialog2* dialog2 = new Dialog2(this); // creates and not destroys when out of scope!
+    Dialog2 dialog2;  // creates and destroys when out of scope!
+    dialog2.show();
 }
 
 
