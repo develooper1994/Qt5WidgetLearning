@@ -1,9 +1,8 @@
-
 #ifndef DIALOG_H
 #define DIALOG_H
 
 #include <QDialog>
-
+#include "login.h"
 
 
 QT_BEGIN_NAMESPACE

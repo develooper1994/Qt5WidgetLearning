@@ -1,7 +1,7 @@
-
 #include "dialog.h"
 #include "./ui_dialog.h"
 
+#include <QMessageBox>
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
@@ -16,9 +16,18 @@ Dialog::~Dialog()
 }
 
 
+// slots
+void Dialog::on_btnLogin_clicked(){
+    Login* loginDialog = new Login();
+    loginDialog->exec();
+    if (loginDialog->getName()=="admin" && loginDialog->getPassword()=="admin123") {
+        ui->lblLogin->setText("Welcome: " + loginDialog->getName());
+    } else {
+        ui->lblLogin->setText("Not Logged In");
+        QMessageBox::critical(this, "Invalid Login", "Wrong User or Password");
+    }
 
-void Dialog::on_btnLogin_clicked()
-{
-
+    loginDialog->deleteLater();
 }
 
+// getter-setter
