@@ -94,9 +94,11 @@ void MainWindow::saveFileAs()
 void MainWindow::selectNone()
 {
     QTextCursor cursor = ui->plainTextEdit->textCursor();
-    cursor.setPosition(0,QTextCursor::MoveMode::KeepAnchor);
-    ui->plainTextEdit->setTextCursor(cursor);
+    int position = cursor.position();
+    cursor.clearSelection();
 
+    cursor.setPosition(position, QTextCursor::MoveMode::KeepAnchor);
+    ui->plainTextEdit->setTextCursor(cursor);
 }
 
 
