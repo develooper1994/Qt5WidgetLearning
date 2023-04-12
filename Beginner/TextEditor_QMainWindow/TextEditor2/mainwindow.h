@@ -1,11 +1,17 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "qlistwidget.h"
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QFile>
 #include <QFileDialog>
 #include <QTextStream>
+
+#include <QLabel>
+#include <QListWidgetItem>
+
+#include "dialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -34,11 +40,29 @@ private slots:
     void on_actionToolbar_floatable_toggled(bool arg1);
     void on_actionToolbar_movable_toggled(bool arg1);
 
+    void on_plainTextEdit_textChanged();
+
+    void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_actionAnimals_triggered();
+
+    void on_actionShapes_triggered();
+
+    void on_actionFood_triggered();
+
 private:
     Ui::MainWindow *ui;
+    QLabel* lblIcon;
+    QLabel* lblStatus;
+    QLabel* lblFile;
 
     QString m_filename;
     bool m_saved;
+
+    void init();
+    void load();
+    void setupStatusBar();
+    void updateStatusBar(QStringView status);
 
 };
 #endif // MAINWINDOW_H
