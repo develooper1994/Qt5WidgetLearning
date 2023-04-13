@@ -135,7 +135,7 @@ void MainWindow::on_actionTile_triggered(){
     ui->mdiArea->tileSubWindows();
 }
 void MainWindow::on_actionClose_triggered(){
-    ui->mdiArea->close();
+    ui->mdiArea->closeActiveSubWindow();
 }
 void MainWindow::on_actionClose_All_triggered(){
     ui->mdiArea->closeAllSubWindows();
