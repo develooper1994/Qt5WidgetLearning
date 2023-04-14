@@ -12,13 +12,33 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
+
+set(ABOUT_DIALOG    aboutdialog.cpp
+                    aboutdialog.h
+                    aboutdialog.ui)
+set(FIND_DIALOG     finddialog.cpp
+                    finddialog.h
+                    finddialog.ui)
+set(REPLACE_DIALOG  replacedialog.cpp
+                    replacedialog.h
+                    replacedialog.ui)
+set(DIALOGS         ${ABOUT_DIALOG}
+                    ${FIND_DIALOG}
+                    ${REPLACE_DIALOG})
+set(MAINWINDOW         mainwindow.cpp
+                       mainwindow.h
+                       mainwindow.ui)
+set(GUIPART ${MAINWINDOW}
+            ${DIALOGS})
+set(RESOURCES resources.qrc)
+
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-        resources.qrc
+        ${GUIPART}
+        ${RESOURCES}
 )
+
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(RichTextEditor

@@ -87,11 +87,19 @@
     <addaction name="actionHelp"/>
     <addaction name="actionAbout"/>
    </widget>
+   <widget class="QMenu" name="menuInsert">
+    <property name="title">
+     <string>Insert</string>
+    </property>
+    <addaction name="actionCustom"/>
+    <addaction name="actionAnimals"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuView"/>
    <addaction name="menuTest"/>
    <addaction name="menuAbout"/>
+   <addaction name="menuInsert"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -400,6 +408,16 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionCustom">
+   <property name="text">
+    <string>Custom Text</string>
+   </property>
+  </action>
+  <action name="actionAnimals">
+   <property name="text">
+    <string>Animals</string>
    </property>
   </action>
  </widget>

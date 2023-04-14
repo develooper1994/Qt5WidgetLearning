@@ -3,11 +3,20 @@
 
 #include <QMainWindow>
 #include <QCloseEvent>
+#include <QMessageBox>
+#include <QLabel>
+
 #include <QFile>
 #include <QTextStream>
-#include <QMessageBox>
 #include <QFileDialog>
-#include <QLabel>
+
+#include <QColorDialog>
+#include <QFontDialog>
+#include <QDesktopServices>
+
+#include "finddialog.h"
+#include "replacedialog.h"
+#include "aboutdialog.h"
 
 constexpr inline char dialogFilter[] = "Text Files(*.txt*);;All Files(*.*)";
 
@@ -63,6 +72,10 @@ private slots:
     //item slots
     void on_textEdit_textChanged();
 
+
+    void on_actionCustom_triggered();
+
+    void on_actionAnimals_triggered();
 
 private:
     Ui::MainWindow *ui;
