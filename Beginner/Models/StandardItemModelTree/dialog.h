@@ -5,6 +5,11 @@
 #include <QDebug>
 #include <QStandardItem>
 #include <QStandardItemModel>
+#include <QFileInfo>
+#include <QFileInfoList>
+#include <QStringList>
+#include <QDateTime>
+#include <QDir>
 
 
 QT_BEGIN_NAMESPACE
@@ -24,7 +29,9 @@ private:
     Ui::Dialog *ui;
 
     QStandardItemModel model;
+
     void init();
+    void addFile(QStandardItem* root, QFileInfo info);
 };
 
 #endif // DIALOG_H

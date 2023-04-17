@@ -19,6 +19,8 @@ class Dialog : public QDialog
 public:
     Dialog(QWidget *parent = nullptr);
     ~Dialog();
+private slots:
+    void itemChanged(QStandardItem* item);
 
 private:
     Ui::Dialog *ui;
