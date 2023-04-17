@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>688</width>
-    <height>458</height>
+    <width>648</width>
+    <height>364</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <enum>Qt::Horizontal</enum>
      </property>
      <widget class="QTreeView" name="treeView"/>
-     <widget class="QListWidget" name="listWidget"/>
+     <widget class="QListView" name="listView"/>
     </widget>
    </item>
   </layout>
