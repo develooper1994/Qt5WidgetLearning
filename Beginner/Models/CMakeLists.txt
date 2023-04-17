@@ -4,4 +4,4 @@ project(Models VERSION 0.1 LANGUAGES CXX)
 
 add_subdirectory(StringListModel)
 add_subdirectory(FileSystemModel)
-
+add_subdirectory(StandardItemModel)
