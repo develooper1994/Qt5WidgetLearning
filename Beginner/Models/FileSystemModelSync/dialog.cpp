@@ -1,4 +1,3 @@
-
 #include "dialog.h"
 #include "./ui_dialog.h"
 
@@ -20,8 +19,8 @@ void Dialog::init(){
     ui->treeView->setModel(&model);
     ui->listView->setModel(&model);
 
-    for (int idx = 0; idx < model.columnCount(); ++idx) {
-        //ui->treeView->hideColumn(idx);
+    for (int idx = 1; idx < model.columnCount(); ++idx) {
+        ui->treeView->hideColumn(idx);
     }
 
     //ui->listView->setViewMode(QListView::ViewMode::ListMode);  // looks organized

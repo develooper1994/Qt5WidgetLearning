@@ -19,7 +19,7 @@ void Dialog::init(){
     dirModel.setRootPath(QDir::currentPath());
     dirModel.setFilter(QDir::Filter::Drives | QDir::Filter::AllDirs | QDir::Filter::NoDotAndDotDot);
 
-    // setup tree veiw
+    // setup tree view
     ui->treeView->setModel(&dirModel);
 
     // Hide coloums
