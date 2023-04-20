@@ -11,8 +11,8 @@ class Equation : public QObject
     Q_OBJECT
 public:
     explicit Equation(QObject *parent = nullptr);
-
-    enum Action {NONE,RESET,ADD,SUBSTRACT,MULTIPLY,DIVIDE};
+    
+    enum Action {NONE,RESET,ADD,SUBTRACT,MULTIPLY,DIVIDE};
 
     QString sum() const;
     void setSum(const QString &newSum);
