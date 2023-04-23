@@ -2,18 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QFileDialog>
-#include <QMessageBox>
-#include <QCloseEvent>
 #include <QListWidget>
 #include <QListWidgetItem>
+#include <QFileDialog>
 #include <QFile>
+#include <QMessageBox>
+#include <QCloseEvent>
 #include <QDataStream>
 #include <QDebug>
-
-
-#define FileDialogFilter "To-Do (*.td)"
-
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,14 +25,23 @@ public:
 
 private slots:
     void on_actionNew_triggered();
+
     void on_actionOpen_triggered();
+
     void on_actionSave_triggered();
+
     void on_actionSave_As_triggered();
+
     void on_actionExit_triggered();
+
     void on_actionAdd_triggered();
+
     void on_actionRemove_triggered();
+
     void on_actionClear_triggered();
+
     void on_actionSelect_All_triggered();
+
     void on_actionSelect_None_triggered();
 
     void on_actionChecked_triggered();
@@ -50,17 +55,14 @@ private:
 
     QString m_filename;
     bool m_changed;
-
     void create();
     void open(QString path);
     void save(QString path);
-    bool checkSaved();
+    void checkSave();
     void createItem(Qt::CheckState state, QString name);
-    void setCheckState(Qt::CheckState state);
 
     // QWidget interface
 protected:
     void closeEvent(QCloseEvent *event) override;
 };
-
 #endif // MAINWINDOW_H
