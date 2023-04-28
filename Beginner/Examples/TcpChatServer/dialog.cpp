@@ -89,8 +89,8 @@ void Dialog::back(){
     int min = 0;
     int idx = ui->stackedWidget->currentIndex();
     --idx;
-    if (idx<=min)
-        idx = min+1;
+    if (idx<min)
+        idx = min;
     ui->stackedWidget->setCurrentIndex(idx);
     enableButtons();
 }
