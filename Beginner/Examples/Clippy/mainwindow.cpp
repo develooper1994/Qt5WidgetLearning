@@ -48,10 +48,18 @@ void MainWindow::save(QString path, const QStringList& list){
         return;
     }
     //QDataStream instead to load and save multi-line
+    QDataStream stream(&file);
+    int count = list.size();
+    stream << count;
+    foreach (QString line, list) {
+        stream << line;
+    }
+    /*
     QTextStream stream(&file);
     foreach (QStringView line, list) {
         stream << line << "\r\n";
     }
+    */
     file.close();
 }
 
@@ -62,11 +70,23 @@ QStringList MainWindow::open(QString path){
         return QStringList();
     }
     //QDataStream instead to load and save multi-line
-    QTextStream stream(&file);
     QStringList list;
+
+    QDataStream stream(&file);
+    int count;
+    stream >> count;
+    while (count--) {
+        QString data;
+        stream >> data;
+        list.append(data);
+    }
+
+    /*
+    QTextStream stream(&file);
     while(!stream.atEnd()){
         list.append(stream.readLine());
     }
+    */
     return list;
 }
 
