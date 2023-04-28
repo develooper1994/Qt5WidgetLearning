@@ -1,4 +1,3 @@
-
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -18,6 +17,13 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void on_btnConnect_clicked();
+
+    void on_btnDisconnect_clicked();
+
+    void on_btnSend_clicked();
 
 private:
     Ui::MainWindow *ui;

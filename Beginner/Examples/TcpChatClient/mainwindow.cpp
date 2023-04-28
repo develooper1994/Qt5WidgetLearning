@@ -1,4 +1,3 @@
-
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
@@ -10,9 +9,23 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow(){
     delete ui;
 }
 
+
+
+void MainWindow::on_btnConnect_clicked(){
+
+}
+
+
+void MainWindow::on_btnDisconnect_clicked(){
+
+}
+
+
+void MainWindow::on_btnSend_clicked(){
+
+}
 
