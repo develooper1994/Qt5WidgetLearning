@@ -2,15 +2,17 @@
 
 Server::Server(QObject *parent) : QTcpServer(parent)
 {
-
 }
 
-int Server::count(){
+int Server::count()
+{
     return m_list.count();
 }
 
-void Server::close(){
-    foreach (QTcpSocket *socket, m_list){
+void Server::close()
+{
+    foreach (QTcpSocket *socket, m_list)
+    {
         socket->close();
     }
     qDeleteAll(m_list);
@@ -21,46 +23,53 @@ void Server::close(){
     QTcpServer::close();
 }
 
-void Server::disconnected(){
-    QTcpSocket *socket = qobject_cast<QTcpSocket*>(sender());
-    if(!socket)return;
+void Server::disconnected()
+{
+    QTcpSocket *socket = qobject_cast<QTcpSocket *>(sender());
+    if (!socket)
+        return;
 
     m_list.removeAll(socket);
-    disconnect(socket,&QTcpSocket::disconnected,this,&Server::disconnected);
-    disconnect(socket,&QTcpSocket::readyRead,this,&Server::readyRead);
+    disconnect(socket, &QTcpSocket::disconnected, this, &Server::disconnected);
+    disconnect(socket, &QTcpSocket::readyRead, this, &Server::readyRead);
     socket->deleteLater();
-    //delete socket;
+    // delete socket;
 
     emit changed();
 }
 
-void Server::readyRead(){
-    QTcpSocket *socket = qobject_cast<QTcpSocket*>(sender());
-    if(!socket)return;
+void Server::readyRead()
+{
+    QTcpSocket *socket = qobject_cast<QTcpSocket *>(sender());
+    if (!socket)
+        return;
 
     QByteArray data = socket->readAll();
-    foreach(QTcpSocket *socket, m_list){
+    foreach (QTcpSocket *socket, m_list)
+    {
         socket->write(data);
     }
 }
 
-void Server::incomingConnection(qintptr handle){
+void Server::incomingConnection(qintptr handle)
+{
     QTcpSocket *socket = new QTcpSocket();
-    if(!socket->setSocketDescriptor(handle)){
-        socket->setSocketDescriptor(handle);
+    if (!socket->setSocketDescriptor(handle))
+    {
         qCritical() << socket->errorString();
         delete socket;
         return;
     }
 
-    if(!socket->waitForConnected(3000)){
+    if (!socket->waitForConnected(3000))
+    {
         delete socket;
         return;
     }
 
     m_list.append(socket);
-    connect(socket,&QTcpSocket::disconnected,this,&Server::disconnected);
-    connect(socket,&QTcpSocket::readyRead,this,&Server::readyRead);
+    connect(socket, &QTcpSocket::disconnected, this, &Server::disconnected);
+    connect(socket, &QTcpSocket::readyRead, this, &Server::readyRead);
 
     emit changed();
     socket->write(m_message.toLatin1());
@@ -68,10 +77,12 @@ void Server::incomingConnection(qintptr handle){
 }
 
 // getter-setter
-QString Server::message() const{
+QString Server::message() const
+{
     return m_message;
 }
 
-void Server::setMessage(const QString &message){
+void Server::setMessage(const QString &message)
+{
     m_message = message;
 }
